@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head></head>
+
+	<body></body>
+
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+	<script>
+
+	var x = 
+	{ 
+	  MAC : 0,
+	  hora_configurada : 0, 
+	  modelo : 0, 
+	  activacion_de_productos_microsoft : 
+	  { microsoft_office : 0, microsoft_project: 0, microsoft_visio : 0, microsoft_visio : 0 }, 
+	  cables_ordenados : 0, 
+	  clonado : 0, 
+	  comentarios : {}, 
+	  dominio : { ejecutado : 0, valor : 0 }, 
+	  freezeado : 0, 
+	  IP : {ejecutado : 0, valor : 0},  
+	  netsupport : 0, 
+	  nombre_de_maquina : {valor : 0, ejecutado : 0}, 
+	  parlantes : 0, 
+	  perifericos : 
+	  { mouse : 0, teclado : 0, pantalla : 0, splitter : 0, teclado : 0}, 
+	  proyector: {IP : 0, instalado : 0, MAC : 0, modelo : 0, operativo : 0, conexion_con_pc : 0}, 
+	  telon : 1, 
+	  usuario_como_administrador : 1 
+	};
+	
+	function snapshot_fetch(snapshot)
+	{ console.log(snapshot.val()); }
+
+	function error_control(errorObject)
+	{ console.log("The read failed: " + errorObject.code) };
+
+	var sala_n = {"-3" : 0, "-2" : 0, "-1" : 0, "1" : 0, "2" : 0, "3" : 0, "4" : 0, "5" : 0, "6" : 0 };
+	var maquina_n_6 = { "610" : x, "609" : x, "608" : x, "607" : x, "608" : x, "607" : x, "606" : x, "605" : x, "604" : x, "603" : x, "602" : x, "601" : x }	
+	var maquina_n_5 = { "514" : x, "513" : x, "512" : x, "511" : x,"510" : x, "509" : x, "508" : x, "507" : x, "508" : x, "507" : x, "506" : x, "505" : x, "504" : x, "503" : x, "502" : x, "501" : x }  
+	var maquina_n_3 = { "LC7" : 0, "LC6" : 0, "LC5" : 0, "LC4" : 0, "LC3" : 0, "LC2" : 0, "LC1" : 0}; 
+	var maquina_n_2 = { "209" : x, "208" : x, "207" : x, "208" : x, "207" : x, "206" : x, "205" : x, "204" : x, "203" : x, "202" : x, "201" : x }     
+	var maquina_n_01 = { "023" : 0, "022" : 0, "021" : 0, "020" : 0,"019" : 0, "018" : 0, "CITT" : 0 }  
+	var maquina_n_02 = { "001" : 0,"002" : 0, "003" : 0, "004" : 0, "005" : 0, "006" : 0, "007" : 0, "008" : 0, "0010" : 0, "0011" : 0, "0012" : 0, "0013" : 0, "0014" : 0, "0015" : 0, "0016" : 0, "0017" : 0, "0018" : 0, "0019" : 0, "0020" : 0, "0021" : 0, "0022" : 0 }; 
+
+	var ref = new Firebase('https://sanbeka2.firebaseio.com');
+	var child = ref.child("-2/0022");
+	child.set(x);
+
+	ref.on("value", snapshot_fetch, error_control);
+
+	</script>
+</html>

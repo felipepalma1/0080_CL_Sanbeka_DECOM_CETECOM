@@ -1,0 +1,2 @@
+var x = { activacion_de_productos_microsoft : { microsoft_office : 0, microsoft_project: 0, microsoft_visio : 0, microsoft_visio : 0 }, cables_ordenados : 0, clonado : 0, comentarios : {}, dominio : { ejecutado : 0, valor : 0 }, freezeado : 0, IP : {ejecutado : 0, valor : 0} ,  netsupport : 0, nombre_de_maquina : {valor : 0, ejecutado : 0}, parlantes : 0, perifericos : {mouse : 0, teclado : 0, pantalla : 0, splitter : 0, teclado : 0}, proyector: {IP : 0, instalado : 0, MAC : 0, modelo : 0, operativo : 0}, telon : 1, usuario_como_administrador : 1 };
+ 
